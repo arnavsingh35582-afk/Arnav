@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arnav | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.5);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      backdrop-filter: blur(5px);
+    }
+    header h1 {
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      color: #00ffe5;
+    }
+    header nav a {
+      text-decoration: none;
+      color: #fff;
+      margin-left: 20px;
+      transition: color 0.3s ease;
+    }
+    header nav a:hover {
+      color: #00ffe5;
+    }
+    section {
+      padding: 100px 20px;
+      min-height: 100vh;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      color: #00ffe5;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+    .btn {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: 2px solid #00ffe5;
+      background: transparent;
+      color: #00ffe5;
+      cursor: pointer;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn:hover {
+      color: #111;
+      background: #00ffe5;
+      transform: scale(1.05);
+    }
+    .about, .skills, .contact {
+      background: rgba(255, 255, 255, 0.05);
+      margin: 20px 0;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #00ffe5;
+    }
+    .skills ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 10px;
+    }
+    .skills ul li {
+      background: rgba(255,255,255,0.1);
+      padding: 10px;
+      text-align: center;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .skills ul li:hover {
+      transform: translateY(-5px);
+      background: #00ffe5;
+      color: #111;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      font-size: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.3);
+    }
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+      header nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Arnav</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h2>Hi, I'm Arnav</h2>
+    <p>A passionate Web Developer & Freelancer. I build modern, mobile-friendly websites.</p>
+    <button class="btn" onclick="scrollToSection('contact')">Hire Me</button>
+  </section>
+
+  <section class="about" id="about">
+    <h3>About Me</h3>
+    <p>I am a web developer with experience in HTML, CSS, JavaScript, and modern UI design. I create responsive and attractive websites for clients.</p>
+  </section>
+
+  <section class="skills" id="skills">
+    <h3>My Skills</h3>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>PHP</li>
+      <li>MySQL</li>
+      <li>Three.js</li>
+    </ul>
+  </section>
+
+  <section class="contact" id="contact">
+    <h3>Contact Me</h3>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Arnav | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
